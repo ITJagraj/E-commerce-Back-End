@@ -1,4 +1,4 @@
-const { Model, DataTypes, INTEGER, DECIMAL, NUMBER, STRING} = require('sequelize');
+const { Model, INTEGER, DECIMAL, STRING} = require('sequelize');
 
 //import our database connection from config.js
 const sequelize = require('../config/connection.js');
