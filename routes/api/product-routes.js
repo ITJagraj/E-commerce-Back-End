@@ -76,7 +76,7 @@ router.post('/', (req, res) => {
         })
         .then((productTagIds) => res.status(200).json(productTagIds))
         .catch((err) => {
-            console.log(err);
+            console.log("test");
             res.status(400).json(err);
         });
 });
@@ -131,7 +131,7 @@ router.delete('/:id', (req, res) => {
         }
     })
         .then(dbProductData => {
-            if (dbProductData) {
+            if (!dbProductData) {
                 res.status(404).json({ message: 'No user found with this id' })
             }
             res.json(dbProductData);

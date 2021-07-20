@@ -1,4 +1,4 @@
-const { Model, INTEGER, DECIMAL, STRING} = require('sequelize');
+const { Model, DataTypes} = require('sequelize');
 
 //import our database connection from config.js
 const sequelize = require('../config/connection.js');
@@ -10,24 +10,24 @@ class Product extends Model {}
 Product.init(
     {
         id: {
-            type: INTEGER,
+            type: DataTypes.INTEGER,
             allowNull: false,
             primaryKey: true,
             autoIncrement: true
           },
           product_name: {
-            type: STRING,
+            type: DataTypes.STRING,
             allowNull: false
           },
           price: {
-            type: DECIMAL,
+            type: DataTypes.DECIMAL,
             allowNull: false,
             validate: {
               isDecimal: true
             }
           },
           stock: {
-            type: INTEGER,
+            type: DataTypes.INTEGER,
             allowNull: false,
             defaultValue: 10,
             validate: {
@@ -35,7 +35,7 @@ Product.init(
             }
           },
           category_id: {
-            type: INTEGER,
+            type: DataTypes.INTEGER,
             references: {
               model: 'category',
               key: 'id'

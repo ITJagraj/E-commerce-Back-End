@@ -1,17 +1,18 @@
 const router = require('express').Router();
 const { Category, Product } = require('../../models');
-
+//getting all categories
 router.get('/', (req, res) => {
 
     Category.findAll({
-        include: {
-            model: Product
-        }
+        include: [{
+            model: Product,
+            attributes: ["id", "product_name", "price", "stock", "category_id"]
+        }]
     }
     )
         .then(dbCategoryData => res.json(dbCategoryData))
         .catch(err => {
-            console.log(err);
+            console.log("hello");
             res.status(500).json(err);
         });
 });
@@ -74,7 +75,7 @@ router.delete('/:id', (req, res) => {
         }
     })
         .then(dbCategoryData => {
-            if (dbCategoryData) {
+            if (!dbCategoryData) {
                 res.status(404).json({ message: 'No user found with this id' });
             }
             res.json(dbCategoryData);
