@@ -7,4 +7,4 @@ Back end for an e-commerce site with working Express.js API that uses Sequelize 
 # Table of Contents
 - [Installation](#installation)
 - [Usage](#Usage)
--[Technologies]- Technologies
+- [Technologies](#technologies)
