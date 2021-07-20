@@ -5,6 +5,6 @@
 Back end for an e-commerce site with working Express.js API that uses Sequelize to interact with a MySQL database.
 
 # Table of Contents
--[ ]- Installation
--[ ]- Usage
--[ ]- Technologies
+- [Installation](#installation)
+- [Usage](#Usage)
+-[Technologies]- Technologies
