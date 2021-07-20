@@ -7,7 +7,6 @@ Back end for an e-commerce site with working Express.js API that uses Sequelize 
 # Table of Contents
 - [Installation](#installation)
 - [Usage](#Usage)
-- [Technologies](#technologies)
 
 1. The user should clone the repository from GitHub.
 2. This application requires Node.js, Express.js, dotenv and Sequelize. Run 'npm install' to install all required npm packages
